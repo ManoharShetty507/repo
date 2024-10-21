@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking_confirmation.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </header>
+
+    <div class="content">
+        <h1>Booking Confirmation</h1>
+        <p>Serviceman: {{ serviceman_name }}</p>
+        <p>Place: {{ place }}</p>
+        <p>Date: {{ date }}</p>
+        <p class="amount-paid">Amount Paid: ₹350</p>
+        <button class="print-button" onclick="window.print()">Print Bill</button>
+    </div>
+</body>
+</html>

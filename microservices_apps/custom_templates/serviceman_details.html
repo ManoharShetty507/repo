@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviceman Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/serviceman_details.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </header>
+
+    <div class="container">
+        <h3>Hurray!! Congratulations, Payment completed successfully!!</h3>
+        <h1>Serviceman Booking</h1>
+        <form id="serviceman-form" action="{{ url_for('book_serviceman') }}" method="POST">
+            <label for="serviceman">Select a serviceman:</label>
+            <select id="serviceman" name="serviceman" required>
+                <option value="">--Select Serviceman--</option>
+                <option value="serviceman1">Srikanth</option>
+                <option value="serviceman2">Vignesh</option>
+                <option value="serviceman3">Ramesh</option>
+                <option value="serviceman4">Manohar Shetty</option>
+                <option value="serviceman5">Chetan TG</option>
+                <option value="serviceman6">Bheemarik Koteshwar</option>
+            </select>
+
+            <label for="place">Select a place:</label>
+            <select id="place" name="place" required>
+                <option value="">--Select Place--</option>
+                <option value="Ashok Nagar">Ashok Nagar</option>
+                <option value="Koramangala">Koramangala</option>
+                <option value="Bellandur">Bellandur</option>
+                <option value="RK Puram">RK Puram</option>
+                <option value="Lalbaugh">Lalbaugh</option>
+                <option value="Indira Nagar">Indira Nagar</option>
+            </select>
+
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date" required>
+            <span id="date-error" class="error-message" style="display:none;">Date must be within the next 15 days.</span>
+
+            <button type="submit" id="book-button" class="support-button">Book Now</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <a href="{{ url_for('contact_us') }}" class="footer-link left">Contact Us</a>
+        <a href="{{ url_for('support') }}" class="footer-link right">Support</a>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="{{ url_for('static', filename='js/support.js') }}"></script>
+</body>
+</html>

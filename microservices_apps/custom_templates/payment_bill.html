@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Bill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/payment_bill.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <a href="{{ url_for('home') }}" class="home-button">Go to Home</a>
+    
+    <h1>Payment Bill</h1>
+
+    <h2>Order Summary</h2>
+    
+    <div id="bill-content" class="order-summary">
+        {% for category, items in cart_items.items() %}
+            <h3>{{ category | capitalize }}</h3>
+            <ul>
+                {% for item in items %}
+                    <li>
+                        {{ item.title if category == 'books' else item.name }} - ${{ item.price }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+    <p>Total Amount: ${{ total_amount }}</p>
+
+    <button onclick="printPage()">Print</button>
+    <button onclick="generatePDF()">Download PDF</button>
+
+    <script>
+        function printPage() {
+            window.print();
+        }
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const content = document.getElementById('bill-content').innerHTML;
+
+            doc.text(content, 8, 8);
+            doc.save('payment_bill.pdf');
+        }
+    </script>
+</body>
+</html>

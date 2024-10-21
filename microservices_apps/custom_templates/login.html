@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <!-- Login form -->
+        <form id="login-form" method="post" action="/" class="login-form">
+            <label for="username" class="form-label">Username (Email):</label>
+            <input type="email" id="username" name="username" class="form-input" required>
+            
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+            
+            <input type="submit" value="Login" class="submit-button">
+        </form>
+
+        <!-- OTP form -->
+        <div id="otp-container" style="margin-top: 20px;">
+            <label for="otp" class="form-label">One-Time Password (OTP):</label>
+            <input type="text" id="otp" name="otp" class="form-input" required>
+            
+            <input type="button" value="Verify OTP" id="verify-otp-button" class="submit-button">
+            <input type="button" value="Get OTP" id="get-otp-button" class="submit-button">
+            <p><a href="#" id="resend-otp">Resend OTP</a></p>
+        </div>
+
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        
+        <p><a href="{{ url_for('forgot_password') }}">Forgot Password?</a></p>
+        <div class="register-link">
+            <p>Don't have an account? <a href="{{ url_for('register') }}" class="register-button">Register Here</a></p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/your_image.jpg') }}" alt="Description of Image" />
+    </div>
+    </div>
+
+    <script>
+        // Handle login form submission
+        document.getElementById('login-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Send a request to the server to verify the username and password
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Login successful! Please check your email for the OTP.');
+                } else {
+                    // Show error message
+                    document.querySelector('.error-message').innerText = data.error;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        };
+
+        // Handle OTP resend
+        document.getElementById('resend-otp').onclick = function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            const username = document.getElementById('username').value;
+
+            // Send a request to resend OTP
+            fetch('/resend_otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message); // Display message to user
+            })
+            .catch(error => console.error('Error:', error));
+        };
+
+        // Handle OTP verification
+        document.getElementById('verify-otp-button').onclick = function(event) {
+            event.preventDefault(); // Prevent default button behavior
+
+            const otp = document.getElementById('otp').value;
+            const username = document.getElementById('username').value;  // Get username
+
+            // Send a request to verify the OTP
+            fetch('/verify_otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username, otp: otp })  // Include username
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = data.redirect_url; // Redirect on success
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        };
+
+        // Handle getting OTP
+        document.getElementById('get-otp-button').onclick = function(event) {
+            event.preventDefault(); // Prevent default button behavior
+
+            const username = document.getElementById('username').value;
+
+            // Send a request to get an OTP
+            fetch('/get_otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message); // Display message to user
+            })
+            .catch(error => console.error('Error:', error));
+        };
+    </script>
+</body>
+</html>

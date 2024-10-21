@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="{{ url_for('home') }}" class="home-link">Home</a>
+    </div>
+    <div class="container">
+        <h1>Books List</h1>
+        <ul id="books-list">
+            <li>
+                <img src="{{ url_for('static', filename='images/1984.jpg') }}" alt="1984" width="100">
+                1984 by George Orwell - $12.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=1) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/mockingbird.jpg') }}" alt="To Kill a Mockingbird" width="100">
+                To Kill a Mockingbird by Harper Lee - $10.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=2) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/pride_prejudice.jpg') }}" alt="Pride and Prejudice" width="100">
+                Pride and Prejudice by Jane Austen - $14.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=3) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/catcher_rye.jpg') }}" alt="The Catcher in the Rye" width="100">
+                The Catcher in the Rye by J.D. Salinger - $13.49
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=4) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/gatsby.jpg') }}" alt="The Great Gatsby" width="100">
+                The Great Gatsby by F. Scott Fitzgerald - $11.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=5) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/moby_dick.jpg') }}" alt="Moby Dick" width="100">
+                Moby Dick by Herman Melville - $15.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=6) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/war_peace.jpg') }}" alt="War and Peace" width="100">
+                War and Peace by Leo Tolstoy - $19.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=7) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/crime_punishment.jpg') }}" alt="Crime and Punishment" width="100">
+                Crime and Punishment by Fyodor Dostoevsky - $17.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=8) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/hobbit.jpg') }}" alt="The Hobbit" width="100">
+                The Hobbit by J.R.R. Tolkien - $16.99
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=9) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/brave_new_world.jpg') }}" alt="Brave New World" width="100">
+                Brave New World by Aldous Huxley - $12.49
+                <form action="{{ url_for('add_to_cart', item_type='books', item_id=10) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+        </ul>
+        <a href="{{ url_for('cart_page') }}" class="view-cart">View Cart</a>
+    </div>
+</body>
+</html>

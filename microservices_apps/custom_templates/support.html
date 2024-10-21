@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/support.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </header>
+    <div class="container">
+        <h1>Support</h1>
+        <div class="support-info">
+            <p>Thanks for reaching  our support team.</p>
+            <p><strong>Note:</strong> You will be charged 350 Rs for this service.</p>
+        </div>
+        <form action="{{ url_for('support') }}" method="POST">
+            <h2>Payment Information</h2>
+            <div>
+                <label for="card_number">Card Number</label>
+                <input type="text" id="card_number" name="card_number" required>
+            </div>
+            <div>
+                <label for="expiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" name="expiry" required>
+            </div>
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <button type="submit" class="support-button">Proceed</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="left">
+            <a href="{{ url_for('contact_us') }}" class="footer-button">Contact Us</a>
+            <a href="{{ url_for('cart_page') }}" class="view-cart">View Cart</a>
+        </div>
+        <div class="right">
+            <p>Email: support@example.com</p>
+            <p>Phone: +1-234-567-890</p>
+        </div>
+    </footer>
+</body>
+</html>

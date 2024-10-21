@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <style>
+        /* Add some basic styles for layout */
+        .location-button {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            padding: 10px 15px;
+            background-color: #007BFF; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .location-button:hover {
+            background-color: #0056b3; /* Darker shade for hover effect */
+        }
+
+        .location-section {
+            margin-top: 50px; /* To avoid overlap with the button */
+        }
+    </style>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            document.getElementById("location").innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+            // Fetch the address based on coordinates
+            fetch(`/get_address?lat=${latitude}&lon=${longitude}`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.error) {
+            document.getElementById("full_address").innerHTML = `Error: ${data.error}`;
+        } else {
+            document.getElementById("full_address").innerHTML = `Address: ${data.display_name}`;
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching address:', error);
+        document.getElementById("full_address").innerHTML = 'Unable to retrieve address.';
+    });
+
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("location").innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Home link at the top -->
+        <div class="header home-header">
+            <a href="{{ url_for('home') }}" class="home-link">Home</a>
+        </div>
+
+        <!-- Books, Electronics, Household navigation -->
+        <div class="header nav-header">
+            <a href="{{ url_for('books_page') }}" class="nav-link books">Books</a>
+            <a href="{{ url_for('electronics_page') }}" class="nav-link electronics">Electronics</a>
+            <a href="{{ url_for('household_page') }}" class="nav-link household">Household</a>
+            <a class="nav-link order" href="{{ url_for('orders') }}">Orders</a>
+        </div>
+
+        <h1>Your Cart</h1>
+
+        <!-- Use Current Location Button -->
+        <div class="container">
+            <h1>Get Your Location Address</h1>
+            <button onclick="getLocation()">Use Current Location</button>
+            <p id="location"></p>
+            <p id="full_address"></p>
+
+        <div class="location-section">
+            <h2>Delivery Location</h2>
+            <p id="location_display">Location: Not set</p>
+            <input type="hidden" name="live_location" id="live_location" required>
+        </div>
+
+        <h2>Books</h2>
+        <ul>
+            {% for book in cart.books %}
+                <li>
+                    <img src="{{ url_for('static', filename='images/' ~ book.image) }}" alt="{{ book.title }}" width="100">
+                    {{ book.title }} by {{ book.author }} - ${{ book.price }}
+                    <form action="{{ url_for('remove_from_cart', item_type='books', item_id=book.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+            {% else %}
+                <li>No books in cart.</li>
+            {% endfor %}
+        </ul>
+        <p>Total for Books: ${{ cart.books | map(attribute='price') | sum }}</p>
+
+        <h2>Electronics</h2>
+        <ul>
+            {% for electronic in cart.electronics %}
+                <li>
+                    <img src="{{ url_for('static', filename='images/' ~ electronic.image) }}" alt="{{ electronic.name }}" width="100">
+                    {{ electronic.name }} - ${{ electronic.price }}
+                    <form action="{{ url_for('remove_from_cart', item_type='electronics', item_id=electronic.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+            {% else %}
+                <li>No electronics in cart.</li>
+            {% endfor %}
+        </ul>
+        <p>Total for Electronics: ${{ cart.electronics | map(attribute='price') | sum }}</p>
+
+        <h2>Household Items</h2>
+        <ul>
+            {% for item in cart.household %}
+                <li>
+                    <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.name }}" width="100">
+                    {{ item.name }} - ${{ item.price }}
+                    <form action="{{ url_for('remove_from_cart', item_type='household', item_id=item.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+            {% else %}
+                <li>No household items in cart.</li>
+            {% endfor %}
+        </ul>
+        <p>Total for Household Items: ${{ cart.household | map(attribute='price') | sum }}</p>
+
+        <h3>Total Amount: ${{ total_amount }}</h3>
+
+        <!-- Checkout Button -->
+        <form action="{{ url_for('checkout') }}" method="post">
+            <input type="hidden" name="live_location" id="live_location" required>
+            <button type="submit" class="checkout-button">Checkout</button>
+        </form>
+    </div>
+</body>
+</html>

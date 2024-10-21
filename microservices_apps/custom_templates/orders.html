@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="login-container">
+        <a href="{{ url_for('home') }}" class="login-button">Home</a>
+    </div>
+    <title>Orders</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            max-width: 80%; /* Adjusted width to better fit the layout */
+            margin-left: auto;
+            margin-right: auto; /* Center the list */
+        }
+
+        /* Styling the home button */
+        .login-button {
+            display: inline-block;
+            padding: 10px 10px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            text-decoration: none; /* No underline */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hover effect for the button */
+        .login-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .login-container {
+            position: absolute;
+            right: 20px; /* Adjust for distance from the right edge */
+            top: 20px; /* Adjust for distance from the top */
+        }
+
+        ul li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px; /* Increased padding for better appearance */
+            margin: 5px 0; /* Reduced margin */
+            font-size: 14px; /* Optional: adjust font size for a more compact look */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+        }
+
+        ul li img {
+            width: 50px; /* Set a fixed width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Orders</h1>
+
+    <!-- Books Orders -->
+    <h2>Books</h2>
+    <ul>
+        {% for book in cart['books'] %}
+            <li>
+                <img src="{{ url_for('static', filename='images/' + book['image']) }}" alt="{{ book['title'] }}">
+                {{ book['title'] }} - ${{ book['price'] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Electronics Orders -->
+    <h2>Electronics</h2>
+    <ul>
+        {% for electronic in cart['electronics'] %}
+            <li>
+                <img src="{{ url_for('static', filename='images/' + electronic['image']) }}" alt="{{ electronic['name'] }}">
+                {{ electronic['name'] }} - ${{ electronic['price'] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Household Orders -->
+    <h2>Household Items</h2>
+    <ul>
+        {% for item in cart['household'] %}
+            <li>
+                <img src="{{ url_for('static', filename='images/' + item['image']) }}" alt="{{ item['name'] }}">
+                {{ item['name'] }} - ${{ item['price'] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Total Price -->
+    <h2>Total Price: ${{ total_price }}</h2>
+
+    <!-- Checkout Button -->
+    <form action="/checkout" method="POST">
+        <button type="submit">Checkout</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <style>
+        /* Top right icon container */
+
+    </style>
+</head>
+<body>
+<!-- Banner Section -->
+<div class="banner">
+    <h1>Welcome to Our Online Store</h1>
+</div>
+        <h4>Hello {{ session['username'] }}, welcome to the store!</h4>
+
+        <!-- Profile Icon in top right corner -->
+        <div class="profile-icon-container" onclick="toggleDropdown()">
+            <i class="profile-icon">☰</i> <!-- You can replace this with a user icon -->
+            <div class="dropdown-menu" id="profileDropdown">
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('account_info') }}">Account Information</a>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <a href="{{ url_for('books_page') }}" class="box">
+                <img src="{{ url_for('static', filename='images/books.jpg') }}" alt="Books">
+                <h2>Books</h2>
+                <p class="box-link"></p>
+            </a>
+            <a href="{{ url_for('electronics_page') }}" class="box">
+                <img src="{{ url_for('static', filename='images/electronics.jpg') }}" alt="Electronics">
+                <h2>Electronics</h2>
+                <p class="box-link"></p>
+            </a>
+            <a href="{{ url_for('household_page') }}" class="box">
+                <img src="{{ url_for('static', filename='images/household.jpg') }}" alt="Household">
+                <h2>Household</h2>
+                <p class="box-link"></p>
+            </a>
+        </div>
+        </div>
+        <a href="{{ url_for('cart_page') }}" class="cart-button">View Cart</a>
+        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+
+    </div>
+    <div class="right-side-image">
+        <img src="{{ url_for('static', filename='images/your_image.jpg') }}" alt="Right Image">
+      </div>
+      
+    <footer class="footer">
+        <a href="{{ url_for('contact_us') }}" class="footer-button left">Contact Us</a>
+        <a href="{{ url_for('support') }}" class="footer-button right">Support</a>
+    </footer>
+
+    <script>
+        // Toggle the display of the dropdown menu
+        function toggleDropdown() {
+            const dropdown = document.getElementById('profileDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+
+        // Close the dropdown menu if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-icon')) {
+                const dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

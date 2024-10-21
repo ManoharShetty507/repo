@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/electronics.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="{{ url_for('home') }}" class="home-link">Home</a>
+    </div>
+    <div class="container">
+        <h1>Electronics List</h1>
+        <ul id="electronics-list">
+            <li>
+                <img src="{{ url_for('static', filename='images/smartphone.jpg') }}" alt="Smartphone" width="100">
+                Smartphone - $299.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=1) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/laptop.jpg') }}" alt="Laptop" width="100">
+                Laptop - $799.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=2) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/tablet.jpg') }}" alt="Tablet" width="100">
+                Tablet - $199.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=3) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/smartwatch.jpg') }}" alt="Smartwatch" width="100">
+                Smartwatch - $149.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=4) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/headphones.jpg') }}" alt="Headphones" width="100">
+                Headphones - $89.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=5) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/camera.jpg') }}" alt="Camera" width="100">
+                Camera - $499.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=6) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/bluetooth_speaker.jpg') }}" alt="Bluetooth Speaker" width="100">
+                Bluetooth Speaker - $129.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=7) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/printer.jpg') }}" alt="Printer" width="100">
+                Printer - $119.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=8) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/monitor.jpg') }}" alt="Monitor" width="100">
+                Monitor - $219.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=9) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/external_hard_drive.jpg') }}" alt="External Hard Drive" width="100">
+                External Hard Drive - $89.99
+                <form action="{{ url_for('add_to_cart', item_type='electronics', item_id=10) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+        </ul>
+        <a href="{{ url_for('cart_page') }}" class="view-cart">View Cart</a>
+    </div>
+</body>
+</html>

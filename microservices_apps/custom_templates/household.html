@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Items</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/household.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="{{ url_for('home') }}" class="home-link">Home</a>
+    </div>
+    <div class="container">
+        <h1>Household Items List</h1>
+        <ul id="household-list">
+            <li>
+                <img src="{{ url_for('static', filename='images/vacuum.jpg') }}" alt="Vacuum Cleaner" width="100">
+                Vacuum Cleaner - $149.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=1) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/blender.jpg') }}" alt="Blender" width="100">
+                Blender - $89.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=2) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/microwave.jpg') }}" alt="Microwave" width="100">
+                Microwave - $129.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=3) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/air_fryer.jpg') }}" alt="Air Fryer" width="100">
+                Air Fryer - $159.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=4) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/washing_machine.jpg') }}" alt="Washing Machine" width="100">
+                Washing Machine - $499.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=5) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/refrigerator.jpg') }}" alt="Refrigerator" width="100">
+                Refrigerator - $899.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=6) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/dishwasher.jpg') }}" alt="Dishwasher" width="100">
+                Dishwasher - $349.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=7) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/coffee_maker.jpg') }}" alt="Coffee Maker" width="100">
+                Coffee Maker - $79.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=8) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/iron.jpg') }}" alt="Iron" width="100">
+                Iron - $49.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=9) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/electric_kettle.jpg') }}" alt="Electric Kettle" width="100">
+                Electric Kettle - $39.99
+                <form action="{{ url_for('add_to_cart', item_type='household', item_id=10) }}" method="post">
+                    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                </form>
+            </li>
+        </ul>
+        <a href="{{ url_for('cart_page') }}" class="view-cart">View Cart</a>
+    </div>
+</body>
+</html>

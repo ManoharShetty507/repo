@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+</head>
+<div class="login-container">
+    <a href="{{ url_for('home') }}" class="login-button">Home</a>
+</div>
+<body>
+    <h1>Checkout</h1>
+    
+    {% if error %}
+        <p class="error-message">{{ error }}</p>
+    {% endif %}
+    
+    <p>Total Amount: ${{ total_amount }}</p>
+    
+    <form method="POST">
+        <div>
+            <label for="card_number">Card Number</label>
+            <input type="text" name="card_number" id="card_number" required>
+        </div>
+        <div>
+            <label for="expiry">Expiry Date (MM/YY)</label>
+            <input type="text" name="expiry" id="expiry" required>
+        </div>
+        <div>
+            <label for="cvv">CVV</label>
+            <input type="text" name="cvv" id="cvv" required>
+        </div>
+        <div>
+            <button type="submit">Pay Now</button>
+        </div>
+    </form>
+</body>
+</html>

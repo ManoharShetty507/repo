@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/register.css') }}"
+    />
+    <style>
+      /* Popup styles */
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 2px solid #333;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1000;
+        display: none; /* Hidden by default */
+      }
+
+      .popup img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .popup .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        color: red;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none; /* Hidden by default */
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <img
+      src="{{ url_for('static', filename='images/image.jpg') }}"
+      alt="New Image"
+      class="left-image"
+    />
+    <div class="container">
+      <div class="container">
+        <img
+          src="{{ url_for('static', filename='images/namaste.jpg') }}"
+          alt="Register Icon"
+          class="register-icon"
+        />
+        <h1>Register</h1>
+
+        <!-- Display random words -->
+        <div class="random-words">
+          <div class="discount-word">Discount</div>
+          <div class="sale-word">Sale</div>
+          <div class="sale-word">Sale</div>
+          <div class="flash-sale-word">Flash Sale</div>
+          <div class="best-price-word">Best Price</div>
+          <div class="exclusive-deal-word">Exclusive Deal</div>
+        </div>
+
+        <!-- Display flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %}
+        <ul class="flash-messages">
+          {% for category, message in messages %}
+          <li class="flash {{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %} 
+        {% endwith %}
+
+        <form method="post" action="/register" class="login-form" id="register-form">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" name="name" class="form-input" required />
+
+          <label for="username" class="form-label">Username (Email):</label>
+          <input type="text" id="username" name="username" class="form-input" required />
+
+          <label for="password" class="form-label">Password:</label>
+          <input type="password" id="password" name="password" class="form-input" required />
+
+          <label for="confirm_password" class="form-label">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" class="form-input" required />
+
+          <!-- OTP Section -->
+          <div class="otp-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
+            <label for="otp" class="form-label">OTP:</label>
+            <input type="text" id="otp" name="otp" class="form-input" required />
+
+            <!-- Send OTP Button -->
+            <button type="button" id="send-otp" class="otp-button" onclick="sendOtp()">OTP</button>
+          </div>
+
+          <input type="submit" value="Register" class="submit-button" />
+          <div class="login-link">
+            <p>
+              Already have an account?
+              <a href="{{ url_for('home') }}" class="register-button">Login Here</a>
+            </p>
+          </div>
+        </form>
+
+        <script>
+          // Show the popup when the page loads
+          window.onload = function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+          };
+
+          function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+          }
+
+          function sendOtp() {
+            var usernameField = document.getElementById("username");
+            var username = usernameField.value;
+
+            if (!username) {
+              alert("Please enter your email to send OTP.");
+              return;
+            }
+
+            fetch("/otp", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ username: username }),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                alert(data.message);
+              })
+              .catch((error) => console.error("Error:", error));
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
