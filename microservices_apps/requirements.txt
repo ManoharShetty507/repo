@@ -1,0 +1,11 @@
+Flask==2.3.2
+Flask-Mail==0.9.1
+pymongo==4.3.3
+flask-pymongo==2.3.0
+gunicorn==21.0.0        # Production-ready WSGI server for running Flask in production
+Werkzeug==2.3.6         # WSGI utility library for Flask (optional, but often useful)
+dnspython==2.4.2        # For MongoDB URI support with Flask-PyMongo
+
+
+docker build -t flask-mongo-app .
+docker run -p 5000:5000 flask-mongo-app

@@ -1,0 +1,17 @@
+veio ndkz dqyc psf
+
+ docker build -t flaskapp .
+
+docker run -d -p 27017:27017 --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin123 -e MONGO_INITDB_ROOT_PASSWORD=admin123 mongo
+
+sudo docker network create flask-mongo-net
+
+sudo docker network create flask-mongo-net
+
+sudo docker network connect flask-mongo-net mongodb
+
+sudo docker run -d -p 5000:5000 --name ecommerce --network flask-mongo-net flaskapp
+
+sudo docker run -d -p 5000:5000 --name flaskapp --network flask-mongo-net flaskapp
+
+aws ec2 create-volume --size 1gb --volume-type gp2 --availability-zone ap-south-1a

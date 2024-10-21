@@ -1,0 +1,300 @@
+2024-09-29 13:37:55,346 - app - INFO - Flask app started
+2024-09-29 13:37:55,346 - app - WARNING - This is a warning message
+2024-09-29 13:37:55,346 - app - ERROR - An error occurred
+2024-09-29 13:42:37,350 - app - WARNING - Warning message
+2024-09-29 13:42:37,351 - app - ERROR - Error occurred
+2024-09-29 18:01:36,271 - app - WARNING - Warning message
+2024-09-29 18:01:36,271 - app - ERROR - Error occurred
+2024-09-29 18:01:38,985 - app - WARNING - Warning message
+2024-09-29 18:01:38,987 - app - ERROR - Error occurred
+2024-09-29 18:11:34,473 - app - WARNING - Warning message
+2024-09-29 18:11:34,474 - app - ERROR - Error occurred
+2024-09-29 18:11:59,121 - app - WARNING - Warning message
+2024-09-29 18:11:59,121 - app - ERROR - Error occurred
+2024-09-29 18:12:55,213 - app - WARNING - Warning message
+2024-09-29 18:12:55,213 - app - ERROR - Error occurred
+2024-09-29 18:14:05,421 - app - WARNING - Warning message
+2024-09-29 18:14:05,421 - app - ERROR - Error occurred
+2024-09-29 18:14:07,010 - app - WARNING - Warning message
+2024-09-29 18:14:07,010 - app - ERROR - Error occurred
+2024-09-29 18:15:28,870 - app - WARNING - Warning message
+2024-09-29 18:15:28,871 - app - ERROR - Error occurred
+2024-09-29 18:18:06,301 - app - WARNING - Warning message
+2024-09-29 18:18:06,301 - app - ERROR - Error occurred
+2024-09-29 18:18:07,996 - app - WARNING - Warning message
+2024-09-29 18:18:07,996 - app - ERROR - Error occurred
+2024-09-29 18:19:52,507 - app - WARNING - Warning message
+2024-09-29 18:19:52,507 - app - ERROR - Error occurred
+2024-09-29 18:19:54,484 - app - WARNING - Warning message
+2024-09-29 18:19:54,484 - app - ERROR - Error occurred
+2024-09-29 18:24:26,043 - app - WARNING - Warning message
+2024-09-29 18:24:26,043 - app - ERROR - Error occurred
+2024-09-29 18:24:27,953 - app - WARNING - Warning message
+2024-09-29 18:24:27,953 - app - ERROR - Error occurred
+2024-09-29 18:24:49,003 - app - WARNING - Warning message
+2024-09-29 18:24:49,005 - app - ERROR - Error occurred
+2024-09-29 21:08:18,457 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-29 21:08:18,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 21:08:18,461 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 21:08:27,720 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 21:08:27,722 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 21:08:45,118 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:45] "GET / HTTP/1.1" 200 -
+2024-09-29 21:08:45,266 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-29 21:08:45,266 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:45] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:08:54,794 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:54] "GET /register HTTP/1.1" 200 -
+2024-09-29 21:08:54,825 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:54] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2024-09-29 21:08:54,840 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:54] "[36mGET /static/images/namaste.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:08:54,841 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:08:54] "[36mGET /static/images/image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:09:03,185 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:03] "GET /register HTTP/1.1" 200 -
+2024-09-29 21:09:03,223 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:03] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2024-09-29 21:09:03,224 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:03] "[36mGET /static/images/image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:09:03,239 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:03] "[36mGET /static/images/namaste.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:09:28,230 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:28] "POST /otp HTTP/1.1" 200 -
+2024-09-29 21:09:53,055 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:53] "POST /register HTTP/1.1" 200 -
+2024-09-29 21:09:53,100 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:53] "[36mGET /static/images/image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:09:53,105 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:53] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2024-09-29 21:09:53,105 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:09:53] "[36mGET /static/images/namaste.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:10:16,526 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:16] "[32mGET /home HTTP/1.1[0m" 302 -
+2024-09-29 21:10:16,539 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:16] "GET / HTTP/1.1" 200 -
+2024-09-29 21:10:16,561 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:16] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-29 21:10:16,574 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:16] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:10:24,871 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:24] "POST /get_otp HTTP/1.1" 200 -
+2024-09-29 21:10:34,568 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "POST /verify_otp HTTP/1.1" 200 -
+2024-09-29 21:10:34,596 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "GET /home HTTP/1.1" 200 -
+2024-09-29 21:10:34,630 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 21:10:34,637 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:10:34,649 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:10:34,650 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:10:34,653 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:10:34] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:13:16,066 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:13:16] "GET /users HTTP/1.1" 200 -
+2024-09-29 21:13:17,635 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:13:17] "GET /users HTTP/1.1" 200 -
+2024-09-29 21:29:57,951 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Manohar Shetty\\Desktop\\github\\project\\microservices_app\\app.py', reloading
+2024-09-29 21:29:58,489 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 21:30:05,204 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 21:30:05,204 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 21:33:08,021 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:33:08] "GET /users HTTP/1.1" 200 -
+2024-09-29 21:38:49,228 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:49] "GET /cart HTTP/1.1" 200 -
+2024-09-29 21:38:49,337 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:49] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-09-29 21:38:50,486 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "GET /home HTTP/1.1" 200 -
+2024-09-29 21:38:50,528 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 21:38:50,528 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:38:50,533 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:38:50,543 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:38:50,543 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:50] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:38:52,842 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:52] "GET /account_info HTTP/1.1" 200 -
+2024-09-29 21:38:52,870 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:52] "[36mGET /static/css/account.css HTTP/1.1[0m" 304 -
+2024-09-29 21:38:57,722 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:57] "[32mPOST /account_info HTTP/1.1[0m" 302 -
+2024-09-29 21:38:57,737 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:57] "GET /profile HTTP/1.1" 200 -
+2024-09-29 21:38:57,769 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:38:57] "[36mGET /static/css/profile.css HTTP/1.1[0m" 304 -
+2024-09-29 21:59:30,081 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "GET /home HTTP/1.1" 200 -
+2024-09-29 21:59:30,118 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 21:59:30,122 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:59:30,138 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:59:30,138 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 21:59:30,150 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 21:59:30] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:08:06,809 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:08:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-09-29 22:08:06,817 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:08:06] "GET / HTTP/1.1" 200 -
+2024-09-29 22:08:06,858 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:08:06] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-29 22:08:06,861 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:08:06] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:08:13,534 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:08:13] "GET /users HTTP/1.1" 200 -
+2024-09-29 22:10:33,704 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Manohar Shetty\\Desktop\\github\\project\\microservices_app\\app.py', reloading
+2024-09-29 22:10:34,305 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 22:10:35,855 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 22:10:35,855 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 22:10:38,945 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Manohar Shetty\\Desktop\\github\\project\\microservices_app\\app.py', reloading
+2024-09-29 22:10:39,399 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 22:10:41,220 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 22:10:41,221 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 22:11:00,601 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Manohar Shetty\\Desktop\\github\\project\\microservices_app\\app.py', reloading
+2024-09-29 22:11:01,133 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 22:11:02,201 - app - WARNING - Warning message
+2024-09-29 22:11:02,201 - app - ERROR - Error occurred
+2024-09-29 22:11:26,763 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 22:11:28,711 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 22:11:28,712 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 22:11:57,362 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-29 22:11:57,363 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 22:11:57,367 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 22:12:00,110 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 22:12:00,110 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-09-29 22:12:22,686 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:12:22] "GET /register HTTP/1.1" 200 -
+2024-09-29 22:12:22,933 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:12:22] "[36mGET /static/images/namaste.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:12:22,933 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:12:22] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2024-09-29 22:12:22,933 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:12:22] "[36mGET /static/images/image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:12:34,799 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:12:34] "POST /otp HTTP/1.1" 200 -
+2024-09-29 22:13:03,410 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:03] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-09-29 22:13:03,428 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:03] "GET / HTTP/1.1" 200 -
+2024-09-29 22:13:03,483 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:03] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-29 22:13:03,485 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:03] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:13:34,437 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:34] "POST /get_otp HTTP/1.1" 200 -
+2024-09-29 22:13:41,888 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "POST /verify_otp HTTP/1.1" 200 -
+2024-09-29 22:13:41,916 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:13:41,961 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:13:41,961 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:13:41,962 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:13:41,963 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:13:41,963 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:13:41] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:15,042 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:15] "GET /cart HTTP/1.1" 200 -
+2024-09-29 22:14:15,073 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:15] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,674 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "GET /books-page HTTP/1.1" 200 -
+2024-09-29 22:14:17,706 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/css/books.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,720 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/1984.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,721 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/mockingbird.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,723 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/pride_prejudice.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,729 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/gatsby.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,732 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/catcher_rye.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,749 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/moby_dick.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,752 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/war_peace.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,762 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/crime_punishment.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,766 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/hobbit.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:17,766 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:17] "[36mGET /static/images/brave_new_world.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:18,986 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:18] "[32mPOST /add_to_cart/books/2 HTTP/1.1[0m" 302 -
+2024-09-29 22:14:18,997 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:18] "GET /cart HTTP/1.1" 200 -
+2024-09-29 22:14:19,024 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:19] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:19,038 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:19] "[36mGET /static/images/mockingbird.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:24,807 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:14:24,863 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:24,864 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:24,866 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:24,867 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:24,879 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:24] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:28,663 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:28] "GET /account_info HTTP/1.1" 200 -
+2024-09-29 22:14:28,689 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:28] "[36mGET /static/css/account.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:30,404 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:14:30,438 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:30,449 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:30,453 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:30,454 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:30,455 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:30] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:14:34,824 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:34] "GET /support HTTP/1.1" 200 -
+2024-09-29 22:14:34,856 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:34] "[36mGET /static/css/support.css HTTP/1.1[0m" 304 -
+2024-09-29 22:14:43,773 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:43] "POST /support HTTP/1.1" 200 -
+2024-09-29 22:14:43,805 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:43] "[33mGET /static/js/support.js HTTP/1.1[0m" 404 -
+2024-09-29 22:14:43,806 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:43] "GET /static/css/serviceman_details.css HTTP/1.1" 200 -
+2024-09-29 22:14:58,597 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:14:58] "[32mPOST /book_serviceman HTTP/1.1[0m" 302 -
+2024-09-29 22:15:02,720 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:02] "GET /booking_confirmation?serviceman=serviceman1&place=Koramangala&date=2024-09-26 HTTP/1.1" 200 -
+2024-09-29 22:15:02,758 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:02] "GET /static/css/booking_confirmation.css HTTP/1.1" 200 -
+2024-09-29 22:15:10,370 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:15:10,408 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:10,418 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:10,418 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:10,418 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:10,418 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:10] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,568 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "GET /household-page HTTP/1.1" 200 -
+2024-09-29 22:15:14,602 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/css/household.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,622 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/vacuum.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,630 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/blender.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,631 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/microwave.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,632 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/air_fryer.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,638 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/washing_machine.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,642 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/refrigerator.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,656 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/dishwasher.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,672 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/coffee_maker.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,672 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/iron.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:14,672 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:14] "[36mGET /static/images/electric_kettle.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:16,016 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:15:16,065 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:16,069 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:16,072 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:16,090 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:16,090 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:16] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:17,073 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:17] "GET /cart HTTP/1.1" 200 -
+2024-09-29 22:15:17,120 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:17] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:17,122 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:17] "[36mGET /static/images/mockingbird.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:19,350 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:19] "GET /get_address?lat=12.9007616&lon=77.6470528 HTTP/1.1" 200 -
+2024-09-29 22:15:31,118 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "GET /home HTTP/1.1" 200 -
+2024-09-29 22:15:31,164 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:31,169 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:31,170 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:31,180 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:31,182 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:31] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-09-29 22:15:32,888 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-09-29 22:15:32,897 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:32] "GET / HTTP/1.1" 200 -
+2024-09-29 22:15:32,929 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:32] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-29 22:15:32,934 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 22:15:32] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:10:39,039 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-16 15:10:39,053 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-16 15:10:39,056 - werkzeug - INFO -  * Restarting with stat
+2024-10-16 15:10:41,761 - werkzeug - WARNING -  * Debugger is active!
+2024-10-16 15:10:41,771 - werkzeug - INFO -  * Debugger PIN: 911-781-186
+2024-10-16 15:11:05,668 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:05] "GET / HTTP/1.1" 200 -
+2024-10-16 15:11:05,873 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:05] "GET /static/css/login.css HTTP/1.1" 200 -
+2024-10-16 15:11:05,874 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:05] "GET /static/images/your_image.jpg HTTP/1.1" 200 -
+2024-10-16 15:11:06,232 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-16 15:11:16,847 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:16] "GET /register HTTP/1.1" 200 -
+2024-10-16 15:11:16,900 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:16] "GET /static/css/register.css HTTP/1.1" 200 -
+2024-10-16 15:11:16,913 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:16] "GET /static/images/image.jpg HTTP/1.1" 200 -
+2024-10-16 15:11:16,928 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:16] "GET /static/images/namaste.jpg HTTP/1.1" 200 -
+2024-10-16 15:11:48,365 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:11:48] "POST /otp HTTP/1.1" 200 -
+2024-10-16 15:12:35,493 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:12:35] "POST /otp HTTP/1.1" 200 -
+2024-10-16 15:13:05,226 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:05] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-10-16 15:13:05,837 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:05] "GET / HTTP/1.1" 200 -
+2024-10-16 15:13:06,355 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:06] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-10-16 15:13:06,356 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:06] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:23,460 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:23] "POST /get_otp HTTP/1.1" 200 -
+2024-10-16 15:13:32,727 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:32] "POST /verify_otp HTTP/1.1" 200 -
+2024-10-16 15:13:32,980 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:32] "GET /home HTTP/1.1" 200 -
+2024-10-16 15:13:33,039 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:33] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:33,067 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:33] "GET /static/images/household.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:33,092 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:33] "GET /static/images/electronics.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:33,105 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:33] "GET /static/images/books.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:33,140 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:33] "GET /static/css/home.css HTTP/1.1" 200 -
+2024-10-16 15:13:36,356 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:36] "GET /cart HTTP/1.1" 200 -
+2024-10-16 15:13:36,428 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:36] "GET /static/css/cart.css HTTP/1.1" 200 -
+2024-10-16 15:13:38,036 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:38] "GET /orders HTTP/1.1" 200 -
+2024-10-16 15:13:39,683 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "GET /home HTTP/1.1" 200 -
+2024-10-16 15:13:39,714 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-10-16 15:13:39,740 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:39,743 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:39,744 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:39,746 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:39] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:40,919 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:40] "GET /cart HTTP/1.1" 200 -
+2024-10-16 15:13:40,951 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:40] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-10-16 15:13:42,041 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /books-page HTTP/1.1" 200 -
+2024-10-16 15:13:42,137 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/pride_prejudice.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,155 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/gatsby.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,174 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/css/books.css HTTP/1.1" 200 -
+2024-10-16 15:13:42,176 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/1984.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,191 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/mockingbird.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,199 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/moby_dick.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,225 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/catcher_rye.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,230 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/war_peace.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,265 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/hobbit.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,275 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/crime_punishment.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:42,289 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:42] "GET /static/images/brave_new_world.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:43,266 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:43] "[32mPOST /add_to_cart/books/1 HTTP/1.1[0m" 302 -
+2024-10-16 15:13:43,275 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:43] "GET /cart HTTP/1.1" 200 -
+2024-10-16 15:13:43,315 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:43] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-10-16 15:13:43,317 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:43] "[36mGET /static/images/1984.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:13:50,672 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:50] "GET /get_address?lat=12.9410623&lon=77.6185741 HTTP/1.1" 200 -
+2024-10-16 15:13:51,824 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:51] "GET /get_address?lat=12.9410623&lon=77.6185741 HTTP/1.1" 200 -
+2024-10-16 15:13:59,743 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /electronics-page HTTP/1.1" 200 -
+2024-10-16 15:13:59,794 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/css/electronics.css HTTP/1.1" 200 -
+2024-10-16 15:13:59,816 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/headphones.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,837 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/laptop.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,840 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/smartphone.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,847 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/tablet.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,853 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/smartwatch.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,963 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/camera.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,963 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/bluetooth_speaker.jpg HTTP/1.1" 200 -
+2024-10-16 15:13:59,973 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:13:59] "GET /static/images/printer.jpg HTTP/1.1" 200 -
+2024-10-16 15:14:00,025 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "GET /static/images/monitor.jpg HTTP/1.1" 200 -
+2024-10-16 15:14:00,037 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "GET /static/images/external_hard_drive.jpg HTTP/1.1" 200 -
+2024-10-16 15:14:00,940 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "[32mPOST /add_to_cart/electronics/2 HTTP/1.1[0m" 302 -
+2024-10-16 15:14:00,950 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "GET /cart HTTP/1.1" 200 -
+2024-10-16 15:14:00,996 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "[36mGET /static/images/1984.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:14:00,996 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "[36mGET /static/images/laptop.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:14:00,996 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:00] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2024-10-16 15:14:10,976 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:10] "POST /checkout HTTP/1.1" 200 -
+2024-10-16 15:14:11,019 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:11] "GET /static/css/checkout.css HTTP/1.1" 200 -
+2024-10-16 15:14:21,251 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:21] "POST /checkout HTTP/1.1" 200 -
+2024-10-16 15:14:21,299 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:21] "GET /static/css/payment_bill.css HTTP/1.1" 200 -
+2024-10-16 15:14:30,727 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "GET /home HTTP/1.1" 200 -
+2024-10-16 15:14:30,759 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-10-16 15:14:30,760 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "[36mGET /static/images/books.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:14:30,763 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "[36mGET /static/images/electronics.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:14:30,780 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "[36mGET /static/images/household.jpg HTTP/1.1[0m" 304 -
+2024-10-16 15:14:30,781 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2024 15:14:30] "[36mGET /static/images/your_image.jpg HTTP/1.1[0m" 304 -
