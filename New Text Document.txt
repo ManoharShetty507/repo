@@ -45,9 +45,7 @@ region = ap-south-1
 output = json
 EOL
 
-export AWS_ACCESS_KEY_ID="AKIA3OP5TIMSBXC66OPH"
-export AWS_SECRET_ACCESS_KEY="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"
-export AWS_REGION="ap-south-1"
+
 
 # Fetch the bastion host public IP
 log "Fetching Bastion IP"
