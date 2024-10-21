@@ -1,0 +1,176 @@
+aws ec2 describe-instances --filters "Name=tag:Role,Values=bastion" --query "Reservations[*].Instances[*].PublicIpAddress" --output text
+aws ec2 describe-instances --filters "Name=tag:Role,Values=node" --query "Reservations[*].Instances[*].PublicIpAddress" --output text
+
+aws ec2 describe-instances --filters "Name=tag:Name,Values=bastion" --query "Reservations[*].Instances[*].PublicIpAddress" --output text
+
+acess key: AKIA3OP5TIMSBXC66OPH
+secret keyt: cbnkSGcMZs8+buRVirKtfKTb7RuEgHA0JMrFX6VH
+
+[default]
+region = YOUR_PREFERRED_REGION
+output = json
+
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY_ID
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+ curl -v 192.168.1.241:8000/v2/health/ready
+
+
+ ansible-playbook -i inventories/inventory.ini k8s.yaml --ssh-extra-args="-o StrictHostKeyChecking=no"
+ 
+ kubectl label nodes ip-10-200-1-141 node-role.kubernetes.io/control-plane= --overwrite
+
+ sudo chmod 644 singlenode/ansible/inventories/inventory.ini
+
+kubectl logs -n kube-system ebs-csi-controller-6c86df5cf7-jbwtn -c csi-provisioner
+ kubectl logs ebs-csi-controller-6c86df5cf7-z7rv9 -n kube-system -c ebs-plugin
+
+ sudo mount -o rw,sync,no_subtree_check 10.200.1.12:/mnt/myshare /mnt
+ lsmod | grep nfs
+ sudo modprobe nfs
+sudo exportfs -v
+sudo mount -a
+
+sudo mount -t nfs -o rw,nolock 10.200.1.12:/mnt/myshare /mnt
+
+https://docs.cloudferro.com/en/latest/kubernetes/Create-and-access-NFS-server-from-Kubernetes-on-CloudFerro-Cloud.html#:~:text=Set%20up%20NFS%20server%20on%20a%20VM,-As%20a%20prerequisite&text=During%20the%20Network%20selection%20dialog,group%20with%20port%202049%20open.
+
+
+ sudo chmod 644 inventories/inventory.inihttps://kubedemy.io/kubernetes-storage-part-1-nfs-complete-tutorial
+
+# Set up AWS CLI configuration
+mkdir -p ~/.aws
+
+cat > ~/.aws/config <<EOL
+[default]
+region = ap-south-1
+output = json
+EOL
+
+export AWS_ACCESS_KEY_ID="AKIA3OP5TIMSBXC66OPH"
+export AWS_SECRET_ACCESS_KEY="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"
+export AWS_REGION="ap-south-1"
+
+# Fetch the bastion host public IP
+log "Fetching Bastion IP"
+BASTION_IP=$(aws ec2 describe-instances --region ap-south-1 --filters "Name=tag:Name,Values=bastion" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
+
+# Check if the IP is fetched successfully
+if [ -z "$BASTION_IP" ]; then
+  log "Failed to fetch Bastion IP"
+  exit 1
+fi
+log "Bastion IP: $BASTION_IP"
+
+# Fetch the master host public IP
+log "Fetching Master IP"
+MASTER_IP=$(aws ec2 describe-instances --region ap-south-1 --filters "Name=tag:Name,Values=master" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
+
+# Check if the IP is fetched successfully
+if [ -z "$MASTER_IP" ]; then
+  log "Failed to fetch Master IP"
+  exit 1
+fi
+log "Master IP: $MASTER_IP"
+
+# Function to update or add entries
+update_entry() {
+  local section=$1
+  local host=$2
+  local ip=$3
+
+  log "Updating entry: Section: $section, Host: $host, IP: $ip"
+
+  # Remove existing entry if it exists
+  sudo sed -i "/^\[$section\]/,/^\[.*\]/{/^$host ansible_host=.*/d}" "$INVENTORY_FILE"
+
+  # Add or update the entry
+  sudo sed -i "/^\[$section\]/a $host ansible_host=$ip" "$INVENTORY_FILE"
+}
+
+# Ensure the section headers exist, if not add them
+ensure_section_exists() {
+  local section=$1
+
+  if ! grep -q "^\[$section\]" "$INVENTORY_FILE"; then
+    log "Adding section: $section"
+    echo -e "\n[$section]" | sudo tee -a "$INVENTORY_FILE" >/dev/null
+  fi
+}
+
+# Ensure sections exist
+ensure_section_exists "bastion"
+ensure_section_exists "master"
+
+# Update entries
+update_entry "bastion" "bastion" "$BASTION_IP"
+update_entry "master" "master" "$MASTER_IP"
+
+log "Script execution completed successfully"
+10.20.1.234
+
+LOADBALNCER_IP=$(aws ec2 describe-instances --region ap-south-1 --filters "Name=tag:Name,Values=master" --query "Reservations[*].Instances[*].PublicIpAddress" --output text)
+
+/ansible-playbook-k8s-installation/roles/init-master/defaults/tasks/main.yaml
+
+# Example for a specific version, replace with the latest version
+VERSION=v1.8.12
+curl -LO https://github.com/containerd/containerd/releases/download/${VERSION}/containerd-${VERSION}-linux-amd64.tar.gz
+
+# Extract and install
+sudo tar -C /usr/local -xzf containerd-${VERSION}-linux-amd64.tar.gz
+
+# Enable and start containerd
+sudo systemctl enable containerd
+sudo systemctl start containerd
+
+CD_Average Daily Range Zones
+---
+- name: Synchronize time on all servers
+  hosts: controlplane
+  become: yes
+
+  tasks:
+    - name: sync time across all masters
+      import_role:
+        name: time-sync
+
+
+kubectl label nodes ip-10-20-1-45 node-role.kubernetes.io/control-plane=control-plane --overwrite
+
+
+- name: Ensure kubeconfig exists
+  ansible.builtin.file:
+    path: /home/ansible-user/.kube/config
+    state: touch
+    mode: '0644'
+  become: true
+
+- name: Check for changes in kube-proxy ConfigMap
+  shell: |
+    kubectl --kubeconfig=/home/ansible-user/.kube/config get configmap kube-proxy -n kube-system -o yaml | \
+    sed -e "s/strictARP: false/strictARP: true/" | \
+    kubectl --kubeconfig=/home/ansible-user/.kube/config diff -f - -n kube-system
+  register: diff_result
+  failed_when: diff_result.rc not in [0, 1]
+
+- name: Apply changes to kube-proxy ConfigMap if needed
+  shell: |
+    kubectl --kubeconfig=/home/ansible-user/.kube/config get configmap kube-proxy -n kube-system -o yaml | \
+    sed -e "s/strictARP: false/strictARP: true/" | \
+    kubectl --kubeconfig=/home/ansible-user/.kube/config apply -f - -n kube-system
+  when: diff_result.rc == 1
+
+- name: Apply MetalLB manifest
+  shell: |
+    kubectl --kubeconfig=/home/ansible-user/.kube/config apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml
+
+
+
+kubectl get configmap kube-proxy -n kube-system -o yaml | sed -e "s/strictARP: false/strictARP: true/" |
+kubectl apply -f - -n kube-system
+
+kubectl run nginx-pod --image=nginx --port=80
+kubectl expose pod nginx-pod --type=LoadBalancer --port=80 --target-port=80
+
+
