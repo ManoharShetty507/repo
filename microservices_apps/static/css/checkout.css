@@ -1,0 +1,153 @@
+/* General Styles for the Checkout Page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #007BFF;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+}
+.home-button {
+  position: absolute;
+  right: 20px; /* Adjust as needed */
+  top: 20px;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.home-link:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+/* Style for the home button */
+.home-button {
+  position: absolute;
+  right: 20px;  /* Position the button 20px from the right edge */
+  top: 20px;    /* Position the button 20px from the top edge */
+}
+
+/* Style for the link inside the home button */
+.home-link {
+  display: inline-block;
+  padding: 10px 20px; /* Space inside the button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the home button */
+.home-link:hover {
+  background-color: #45a049; /* Darker green when hovering */
+}
+/* Style for the home button */
+.home-button {
+  position: absolute;
+  right: 20px;  /* Position the button 20px from the right edge */
+  top: 20px;    /* Position the button 20px from the top edge */
+}
+
+/* Style for the link inside the home button */
+.home-link {
+  display: inline-block;
+  padding: 10px 20px; /* Space inside the button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the home button */
+.home-link:hover {
+  background-color: #45a049; /* Darker green when hovering */
+}
+
+/* Positioning the home button on the right side */
+.login-container {
+  position: absolute;
+  right: 20px; /* Adjust for distance from the right edge */
+  top: 20px; /* Adjust for distance from the top */
+}
+
+/* Styling the home button */
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners */
+  font-family: Arial, sans-serif;
+}
+
+/* Hover effect for the button */
+.login-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

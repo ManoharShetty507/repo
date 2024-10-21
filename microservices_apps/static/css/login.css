@@ -1,0 +1,163 @@
+/* login.css */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px; /* Adjust padding for a smaller box */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Set a consistent width */
+  margin: 30; /* No margin to ensure centering */
+}
+
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #101011; /* Blue color for the button */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1177e5;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-button {
+  color: #007BFF; /* Blue color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-button:hover {
+  text-decoration: underline;
+}
+/* Existing styles */
+
+.social-login {
+  margin-top: 20px;
+  text-align: center; /* Center align the social login icons */
+}
+
+.social-login p {
+  font-size: 16px;
+  color: #333;
+}
+
+.social-button {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-button img {
+  width: 40px; /* Adjust the size of the icons as needed */
+  height: auto;
+  border: none; /* Remove border if any */
+  border-radius: 5px;
+}
+
+/* otp.css */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.login-container {
+  width: 50%; /* Adjust as necessary */
+  padding: 20px;
+}
+
+.image-container {
+  width: 70%; /* Adjust as necessary */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.image-container img {
+  max-width: 90%; /* Adjust to make the image bigger */
+  height: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.login-container {
+  width: 50%; /* Adjust as necessary */
+  padding: 20px;
+}
+
+.image-container {
+  width: 60%; /* Adjust as necessary */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.image-container img {
+  width: 120%; /* Set image to 90% of the right container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: none; /* Remove any max-width restrictions */
+}

@@ -1,0 +1,70 @@
+/* Payment Bill Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.order-summary {
+  text-align: left;
+  display: inline-block;
+  margin: 20px;
+}
+
+.order-summary h3 {
+  font-size: 18px;
+  color: #666;
+}
+
+.order-summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-summary ul li {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Home button styling */
+.home-button {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007BFF; /* Blue background for Home button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  text-decoration: none;
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+}

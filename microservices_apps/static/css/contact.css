@@ -1,0 +1,50 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container for the Home button */
+.login-container {
+  padding: 10px;
+  text-align: right;
+}
+
+.login-button {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Main container styles */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Contact Information Styles */
+.contact-info {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}

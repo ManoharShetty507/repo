@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f0e7e6, #d93d3d); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  height: 100vh;
+  padding-right: 20px; /* Add a little gap from the right side */
+}
+
+
+/* Flexbox wrapper to align image and register area side by side */
+.wrapper {
+  display: flex;
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Space between image and form */
+}
+
+/* Styling for the left image */
+.left-image {
+  max-width: 50px; /* Limit the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Container styling */
+.container {
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 15px; /* Rounded corners */
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(190, 185, 185, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  border: 1px solid #e8eef3;
+ 
+}
+
+
+
+.register-icon {
+  max-width: 50px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+}
+.left-image {
+  max-width: 500px; /* Set a larger width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 140px; /* Space between the image and the form */
+}
+
+
+/* Title styling */
+h1 {
+  font-size: 18px; /* Reduced font size */
+  color: #333;
+  margin-bottom: 10px; /* Reduced bottom margin */
+  text-align: center;
+}
+
+/* Flash messages styling */
+.flash-messages {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.flash {
+  padding: 8px; /* Reduced padding */
+  margin-bottom: 5px; /* Reduced margin */
+  border-radius: 4px;
+  font-size: 0.75rem; /* Slightly smaller font size */
+  text-align: center;
+}
+
+.flash.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.flash.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 4px; /* Reduced margin */
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  padding: 4px; /* Further reduced padding */
+  margin-bottom: 6px; /* Reduced margin */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px; /* Slightly smaller font size */
+}
+
+.submit-button {
+  background-color: #007BFF; /* Blue color for the button */
+  color: white;
+  padding: 8px; /* Slight padding */
+  border: none;
+  border-radius: 4px;
+  font-size: 13px; /* Slightly smaller font */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%; /* Set to 50% of the container's width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+/* OTP button styling */
+.otp-button {
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 4px 8px; /* Smaller padding */
+  font-size: 12px; /* Smaller font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 10px; /* Slightly rounded corners */
+  width: 80px; /* Set a fixed width for a shorter button */
+  margin-top: 5px; /* Space above the button */
+}
+
+.otp-button:hover {
+  background-color: rgb(53, 2, 2); /* Darker shade on hover */
+}
+
+/* Link styling */
+.login-link {
+  margin-top: 10px; /* Reduced margin */
+  text-align: center;
+}
+
+.login-link a {
+  color: #007BFF; /* Blue color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.sale-word {
+  position: absolute; /* Position it absolutely */
+  left: 20px; /* Adjust the distance from the left */
+  top: 20px; /* Adjust the distance from the top */
+  font-size: 24px; /* Set a font size */
+  font-weight: bold; /* Make it bold */
+  color: #20ad0a; /* Set a color */
+}
+.discount-word {
+  position: absolute; /* Position it absolutely */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust position to truly center it */
+  font-size: 24px; /* Set a font size */
+  font-weight: bold; /* Make it bold */
+  color: red; /* Set color to red */
+}
+.flash-sale-word {
+  position: absolute; /* Position it absolutely */
+  left: 50%; /* Center horizontally */
+  top: 10%; /* Adjust vertical position */
+  transform: translate(-50%, -50%); /* Center it correctly */
+  font-size: 24px; /* Set a font size */
+  font-weight: bold; /* Make it bold */
+  color: rgb(55, 0, 255); /* Set color to red */
+}
+.best-price-word {
+  position: absolute; /* Position it absolutely */
+  left: 20px; /* Adjust the distance from the left */
+  top: 40%; /* Adjust vertical position */
+  font-size: 24px; /* Set a font size */
+  font-weight: bold; /* Make it bold */
+  color: rgb(11, 10, 10); /* Set color to red */
+}
+
+.exclusive-deal-word {
+  position: absolute; /* Position it absolutely */
+  left: 50%; /* Center horizontally */
+  top: 80%; /* Adjust vertical position */
+  transform: translate(-50%, -50%); /* Center it correctly */
+  font-size: 24px; /* Set a font size */
+  font-weight: bold; /* Make it bold */
+  color: rgb(250, 248, 237); /* Set color to red */
+}

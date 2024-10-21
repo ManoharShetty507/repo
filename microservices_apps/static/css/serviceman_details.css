@@ -1,0 +1,104 @@
+/* Reset default margin and padding for the body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin: 20px;
+  padding-right: 20px;
+}
+
+.home-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+h3 {
+  color: green;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin-bottom: 0px;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#book-button {
+  background-color: rgb(94, 6, 6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 15px; /* Smaller padding for a smaller button */
+  max-width: 150px; /* Set a maximum width if needed */
+  width: auto; /* Make sure it doesn't stretch too much */
+}
+
+#book-button:hover {
+  background-color: #555;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.footer-link {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block; /* Make sure buttons don’t stretch */
+}
+
+.footer-link:hover {
+  background-color: #555;
+}
+
+.footer .left {
+  text-align: left;
+}
+
+.footer .right {
+  text-align: right;
+}
