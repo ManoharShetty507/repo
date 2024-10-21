@@ -3,8 +3,6 @@ aws ec2 describe-instances --filters "Name=tag:Role,Values=node" --query "Reserv
 
 aws ec2 describe-instances --filters "Name=tag:Name,Values=bastion" --query "Reservations[*].Instances[*].PublicIpAddress" --output text
 
-acess key: AKIA3OP5TIMSBXC66OPH
-secret keyt: cbnkSGcMZs8+buRVirKtfKTb7RuEgHA0JMrFX6VH
 
 [default]
 region = YOUR_PREFERRED_REGION
