@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flaskapp
-          image: manoharshetty507/microservices:v1 # Correct image name
+          image: manoharshetty507/ecommerce:latest # Correct image name
           ports:
             - containerPort: 5000
           env:
