@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask import Flask, render_template, request, redirect, url_for, session, make_response
 app = Flask(__name__, template_folder='custom_templates')
-import random 
+import random
 import os
 app.secret_key = 'your_secret_key'
 from flask_mail import Mail, Message
@@ -160,7 +160,7 @@ def verify_otp():
 @app.route('/users', methods=['GET'])
 def view_users():
     users = users_collection.find({}, {'_id': 0, 'username': 1})  # Fetch all users without displaying the '_id'
-    
+
     user_list = [user['username'] for user in users]  # Create a list of usernames
     print("Registered Users:", user_list)  # Debugging output to see all registered users
 
@@ -170,64 +170,54 @@ def view_users():
         return render_template('users.html', users=[])
 
 
+# Registration route
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        name = request.form.get('name')  # Get the name
+        name = request.form.get('name')
         username = request.form.get('username').lower()
         password = request.form.get('password')
         confirm_password = request.form.get('confirm_password')
-        otp = request.form.get('otp')
 
         # Check if passwords match
         if password != confirm_password:
             return render_template('register.html', error='Passwords do not match')
 
-        # Check if the OTP is valid
-        if username in otp_store and otp_store[username] == otp:
-            hashed_password = generate_password_hash(password)
+        hashed_password = generate_password_hash(password)
+        users_data = read_users()
+        existing_user = next((user for user in users_data['users'] if user['username'] == username), None)
 
-            # Safely remove the OTP after successful use
-            otp_store.pop(username, None)
+        if existing_user:
+            return render_template('register.html', error='User already exists')
 
-            users_data = read_users()
-            existing_user = next((user for user in users_data['users'] if user['username'] == username), None)
+        # Append the new user data including name
+        users_data['users'].append({'name': name, 'username': username, 'password': hashed_password})
+        write_users(users_data)
 
-            if existing_user:
-                return render_template('register.html', error='User already exists')
+        # Insert the new user into MongoDB
+        users_collection.insert_one({
+            'name': name,
+            'username': username,
+            'password': hashed_password
+        })
 
-            # Append the new user data including name
-            users_data['users'].append({'name': name, 'username': username, 'password': hashed_password})
-            write_users(users_data)
+        # Send confirmation email
+        msg = Message('Registration Successful',
+                      sender='your-email@gmail.com',
+                      recipients=[username])
+        msg.body = ('Thank you for registering!\n '
+                    'Your account has been successfully created.\n'
+                    'Happy shopping!')
+        try:
+            mail.send(msg)
+            flash('Registration successful! A confirmation email has been sent to your email.', 'success')
+        except Exception as e:
+            print(f'Error sending confirmation email: {e}')
+            flash('Registration successful, but failed to send confirmation email.', 'warning')
 
-            # Insert the new user into MongoDB
-            users_collection.insert_one({
-                'name': name,
-                'username': username,
-                'password': hashed_password
-            })
-
-            # Send confirmation email
-            msg = Message('Registration Successful',
-                          sender='your-email@gmail.com',
-                          recipients=[username])
-            msg.body = ('Thank you for registering!\n '
-                        'Your account has been successfully created.\n' 
-
-                        'Happy shopping, you can buy books, Electronics and Household items.')
-            try:
-                mail.send(msg)
-                flash('Registration successful! A confirmation email has been sent to your email.', 'success')
-            except Exception as e:
-                print(f'Error sending confirmation email: {e}')
-                flash('Registration successful, but failed to send confirmation email.', 'warning')
-
-            return redirect(url_for('login'))
-
-        return render_template('register.html', error='Invalid OTP or user not found')
+        return redirect(url_for('login'))
 
     return render_template('register.html')
-
 # After inserting user in MongoDB
 print("Current users in database:")
 for user in users_collection.find():
@@ -295,7 +285,7 @@ def reset_password(email):
 def forgot_password():
     if request.method == 'POST':
         email = request.form['email'].lower()  # Convert email to lowercase for consistency
-        
+
         users_data = read_users()  # Read users from the JSON file
         users = users_data['users']  # Get the list of users
 
@@ -325,7 +315,7 @@ def update_password(email, new_password):
             user['password'] = hash_password(new_password)
             write_users(users_data)  # Write updated users back to the JSON file
             return True
-            
+
     return False
 
 
@@ -421,15 +411,15 @@ def cart_page():
     if request.method == 'POST':
         # Get the selected location from the form
         location = request.form.get('location')
-        
+
         if location:
             # Split the location into latitude and longitude
             lat, lon = map(float, location.split(','))
-            
+
             # Make a request to the Nominatim API
             response = requests.get(f'https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json')
             address_data = response.json()
-            
+
             # Check if the address was found
             if 'display_name' in address_data:
                 address = address_data['display_name']
@@ -437,7 +427,7 @@ def cart_page():
                 address = 'Unable to retrieve address.'
         else:
             address = 'No location selected.'
-        
+
         # Flash the address message
         flash(f'Selected Address: {address}')
 
@@ -468,7 +458,7 @@ def add_to_cart(item_type, item_id):
 def get_address():
     lat = request.args.get('lat')
     lon = request.args.get('lon')
-    
+
     headers = {
         'User-Agent': 'YourAppName/1.0 (tradingcontentdrive.com)'  # Change this to your app's name and your email
     }
@@ -498,20 +488,20 @@ def logout():
 def checkout():
     if 'username' not in session:
         return redirect(url_for('login'))
-    
+
     # Calculate the total amount from the cart
     total_books = sum(item['price'] for item in cart['books'])
     total_electronics = sum(item['price'] for item in cart['electronics'])
     total_household = sum(item['price'] for item in cart['household'])
     total_amount = total_books + total_electronics + total_household
-    
+
     # Get cart items to display in the payment bill
     cart_items = {
         'books': cart['books'],
         'electronics': cart['electronics'],
         'household': cart['household']
     }
-    
+
     if request.method == 'POST':
         card_number = request.form.get('card_number')
         expiry = request.form.get('expiry')
@@ -527,19 +517,19 @@ def checkout():
                 f'Household: {total_household}\n'
                 f'Total Amount: ${total_amount}\n\n'
                 'Happy shopping! You can buy more books, electronics, and household items anytime.'
-            )   
+            )
         try:
                 mail.send(msg)
                 flash('Confirmation email sent!', 'success')
         except Exception as e:
                 print(f'Error sending email: {e}')  # Log the error
-                flash('Failed to send confirmation email.', 'error')    
+                flash('Failed to send confirmation email.', 'error')
         # Dummy payment processing logic
         if card_number and expiry and cvv:
             return render_template('payment_bill.html', cart_items=cart_items, total_amount=total_amount)
         else:
             return render_template('checkout.html', cart_items=cart_items, total_amount=total_amount, error='Please fill all fields.')
-    
+
     return render_template('checkout.html', cart_items=cart_items, total_amount=total_amount)
 
 @app.route('/remove_from_cart/<item_type>/<int:item_id>', methods=['POST'])
@@ -579,7 +569,7 @@ def book_serviceman():
         serviceman = request.form.get('serviceman')
         place = request.form.get('place')
         date = request.form.get('date')
-        
+
         # Redirect to booking confirmation page
         return redirect(url_for('booking_confirmation', serviceman=serviceman, place=place, date=date))
 
@@ -588,7 +578,7 @@ def booking_confirmation():
     serviceman = request.args.get('serviceman')
     place = request.args.get('place')
     date = request.args.get('date')
-    
+
     # Construct the confirmation email
     msg = Message('Booking Confirmation',
                   sender='your-email@gmail.com',
@@ -601,7 +591,7 @@ def booking_confirmation():
         f'Date: {date}\n'
         'Thank you for choosing our service!'
     )
-    
+
     try:
         mail.send(msg)
         flash('Confirmation email sent!', 'success')
@@ -662,7 +652,7 @@ def orders():
     total_books = sum([item['price'] for item in cart['books']])
     total_electronics = sum([item['price'] for item in cart['electronics']])
     total_household = sum([item['price'] for item in cart['household']])
-    
+
     total_price = total_books + total_electronics + total_household
 
     return render_template('orders.html', cart=cart, total_price=total_price)
